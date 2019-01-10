@@ -1,0 +1,58 @@
+﻿<Window x:Class="WPFCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCalculator"
+        mc:Ignorable="d"
+        Icon="cod4.ico"
+        Title="Jeisy's Calculator" Height="600" Width="400">
+    <Grid>
+        
+        <Button Click="GTA_Click">
+            <Button.Content>
+                <Image Source="GTAV.png" Stretch="Fill"/>
+            </Button.Content>
+        </Button>
+
+
+        <StackPanel>
+            <TextBlock Name="ShowAnswer"  FontSize="35" Background="LightBlue" Height="91" Margin="0,0,-0.4,0">这是个有毒的计算器
+
+            </TextBlock>
+
+            <WrapPanel HorizontalAlignment="Center">
+
+                <Button FontStyle="Normal"  Width="120" FontSize="30" Background="Transparent" Height="80" Click="One_Click" FontWeight="Bold" FontFamily="Mistral">1</Button>
+                <Button Width="120" Height="80" Background="Transparent" FontSize="30" Click="Two_Click" FontWeight="Bold" FontFamily="Mistral">2</Button>
+                <Button Width="120" Height="80" Background="Transparent" FontSize="30" Click="Three_Click" Content="3" FontWeight="Bold" FontFamily="Mistral"/>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Width="120" FontSize="30" Background="Transparent" Height="80" Click="Four_Click" FontWeight="Bold" FontFamily="Mistral">4</Button>
+                <Button Width="120" FontSize="30" Background="Transparent" Click="Five_Click" FontWeight="Bold" FontFamily="Mistral">5</Button>
+                <Button Width="120" FontSize="30" Background="Transparent" Click="Six_Click" FontWeight="Bold" FontFamily="Mistral">6</Button>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Width="120" FontSize="30" Background="Transparent" Height="80" Click="Seven_Click" FontWeight="Bold" FontFamily="Modern No. 20">7</Button>
+                <Button Width="120" FontSize="30" Background="Transparent" Click="Eight_Click" FontWeight="Bold" FontFamily="Mistral">8</Button>
+                <Button Width="120" FontSize="30" Background="Transparent" Click="Nine_Click" FontWeight="Bold" FontFamily="Mistral">9</Button>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Width="70" FontSize="30" Background="Transparent" Height="80" Click="Plus_Click" FontWeight="Bold">+</Button>
+                <Button Width="70" FontSize="30" Background="Transparent" Click="Cut_Click" FontWeight="Bold">-</Button>
+                <Button Width="70" FontSize="30" Background="Transparent" Content="0" Click="Zero_Click" FontWeight="Bold" FontFamily="Mistral"/>
+                <Button Width="70" FontSize="30" Background="Transparent" Click="Multiply_Click" FontWeight="Bold">×</Button>
+                <Button Width="70" FontSize="30" Background="Transparent" Click="Division_Click" FontWeight="Bold">÷</Button>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Width="255" FontSize="40" Background="Transparent" Height="59" Click="Clean_Click" FontWeight="Bold">归零</Button>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBox  FontSize="30" Width="237" Height="42" Margin="30,0,0,0">在这里输入式子</TextBox>
+                <Button Width="75" Height="28" FontSize="19" Click="Count_Click" FontWeight="Bold">=</Button>
+            </WrapPanel>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Red" Margin="148,0,165.6,0.4" Width="80"><Run Text="开发员: Jeisy"/></TextBlock>
+       
+    </Grid>
+</Window>
